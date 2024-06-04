@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-     <h1>ieieieiei</h1>
     <?php require 'header.php'?>
 
 </body>
