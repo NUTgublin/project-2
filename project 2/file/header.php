@@ -14,6 +14,7 @@
 </head>
 <body>
 <header> 
+    <img src="..\Logos\logo-neutraal-kieslab-lichtblauw.svg" alt="logo">
     <h1> Neutraal Kieslab </h1>
 
 
