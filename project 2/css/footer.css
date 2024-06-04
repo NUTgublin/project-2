@@ -1,7 +1,28 @@
-*{
+* {
     font-family: quicksand;
 }
 
 footer {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
     background-color: #2B2D42;
+    color: #EDF2F4;
+}
+
+footer p {
+    padding-left: 1%;
+}
+
+a:link {
+    color: #EDF2F4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8D99AE;
 }
