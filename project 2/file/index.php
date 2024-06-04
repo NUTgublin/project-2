@@ -11,5 +11,7 @@
 </head>
 <body>
      <h1>ieieieiei</h1>
+    <?php require 'header.php'?>
+
 </body>
 </html>
