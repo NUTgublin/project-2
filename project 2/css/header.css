@@ -1,14 +1,23 @@
 body{
     margin: 0px;
- 
 }
 header{
     display: flex;
     flex-direction: row;
-    color: whitesmoke;
-    background-color:darkslategrey;
+    font-family: inter bold;
+    color: #8D99AE;
+    background-color:#2B2D42;
     justify-content: space-between;
     
+}
+h1
+{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+
 }
 
 .container{
