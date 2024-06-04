@@ -17,6 +17,8 @@
 <body>
     <h3>neutraal Kieslab</h3>
     <h1>ieieieiei</h1>
+    <?php require 'header.php'?>
+
 </body>
 
 </html>
