@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <h3>neutraal Kieslab</h3>
     <?php require 'header.php'?>
 
 </body>
