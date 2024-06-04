@@ -1,11 +1,10 @@
 body{
     margin: 0px;
- 
 }
 header{
     display: flex;
     flex-direction: row;
-    color: whitesmoke;
+    color: red;
     background-color:darkslategrey;
     justify-content: space-between;
     
