@@ -17,12 +17,13 @@
 
 <body>
   <nav>
-      <a href="index.php">partijen</a>
-      <a href="nieuws.php">nieuws</a>
-      <a href="stellingen.php">stellingen</a>
+    <a href="index.php">home</a>
+    <a href="partijen.php">partijen</a>
+    <a href="nieuws.php">nieuws</a>
+    <a href="stellingen.php">stellingen</a>
   </nav>
   <div class="DivContainer">
-  <p>hallo</p>
+    <p>hallo</p>
   </div>
 
 
