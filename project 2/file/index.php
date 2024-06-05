@@ -15,6 +15,10 @@
 </head>
 
 <body>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f7d713439c079744fb7f67df30cd1a60ffb81ff
 <?php require 'footer.php' ?>
 </body>
     
