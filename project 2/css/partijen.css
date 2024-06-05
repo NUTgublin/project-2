@@ -1,4 +1,4 @@
-*{
+* {
     font-family: quicksand;
 }
 
@@ -17,12 +17,34 @@ nav {
 nav a:link {
     color: #EDF2F4;
     text-decoration: none;
-    
-    
 }
 
 nav a:hover {
-   color: #352D27; 
+    color: #352D27;
 }
 
+.GridContainer {
+    display: grid;
+    grid-template-columns: 25px repeat(2, 1fr) 25px;
+    grid-template-rows: repeat(5, 20vh);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
 
+.VVD {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    background-color: #EDF2F4;
+    align-self: center;
+    max-width: 75%;
+    max-height: 100%;
+}
+
+.VVD img {
+    max-width: 20%;
+    max-height: 30%;
+    width: auto;
+    height: auto;
+}
