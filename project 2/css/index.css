@@ -21,6 +21,7 @@
     background-color:#EDF2F4;
     color: #8D99AE;
     height: 175px;
+    border-radius: 10px;
 }
 .fototest{
     grid-column: 1/ span 5;
