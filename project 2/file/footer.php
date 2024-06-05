@@ -17,8 +17,10 @@
 <body>
     <footer>
         <p>Neutraal Kieslab ® 2024. Alle rechten voorbehouden.</p>
-        <a href="privacy.php">privacy</a>
-        <a href="contact.php">contact</a>
+        <div>
+            <a href="privacy.php">privacy</a>
+            <a href="contact.php">contact</a>
+        </div>
     </footer>
 </body>
 
