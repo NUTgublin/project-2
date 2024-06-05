@@ -1,7 +1,5 @@
 body{
     margin: 0px;
-    grid-column: 1;
-    grid-row: 1/ span 5;
 }
 header{
     display: flex;
@@ -13,7 +11,7 @@ header{
 }
 h1
 {
- 
+ align-self: center;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
