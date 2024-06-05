@@ -9,11 +9,14 @@
 
 .DivContainer{
     display: grid;
-    grid-template-columns: 50px repeat(2, 1fr) 2fr 50px; 
-    grid-template-rows: repeat(2, 1fr);
-     
+    grid-template-columns: 50px 2fr repeat(2, 1fr) 50px; 
+    grid-template-rows: repeat(3, 27vh);
+    
+    
 }
-
+p{
+    grid-column: 3;
+}
 nav {
     display: flex;
     justify-content: center;
@@ -23,9 +26,7 @@ nav {
 }
 
 nav a:link {
-    color: #EDF2F4;
-    
-    
+    color: #EDF2F4;   
 }
 
 nav a:hover {
