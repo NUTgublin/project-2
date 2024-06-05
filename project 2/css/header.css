@@ -1,10 +1,11 @@
-body{
+body {
     margin: 0px;
 }
-header{
+
+header {
     display: flex;
-    flex-direction: flex-start;
-    font-family: inter bold;
+    align-items: center;
+    font-family: "Inter Bold", sans-serif;
     color: #EDF2F4;
     background-color:#2B2D42; 
  
