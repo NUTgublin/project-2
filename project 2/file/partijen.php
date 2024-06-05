@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require 'header.php' ?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +16,15 @@
 </head>
 
 <body>
+    <nav>
+        <a href="partijen.php">partijen</a>
+        <a href="nieuws.php">nieuws</a>
+        <a href="stellingen.php">stellingen</a>
+    </nav>
     <div class="GridContainer">
 
-    </div>  
+    </div>
+    <?php require 'footer.php' ?>
 </body>
 
 </html>
