@@ -15,7 +15,11 @@
 </head>
 
 <body>
+
+
+
 <?php require 'footer.php' ?>
+
 </body>
     
 </html>
