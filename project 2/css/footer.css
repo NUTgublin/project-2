@@ -27,7 +27,7 @@ footer p {
     padding-left: 1%;
 }
 
-a:link {
+a:link, a:visited {
     padding: 0 5%;
     color: #EDF2F4;
     text-decoration: none;
