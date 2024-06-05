@@ -7,22 +7,24 @@ header {
     align-items: center;
     font-family: "Inter Bold", sans-serif;
     color: #EDF2F4;
-    background-color: #2B2D42;
-    padding: 10px;
+    background-color:#2B2D42; 
+ 
+
+}
+h1
+{
+ align-self: center;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  margin-left: 2%;  
 }
 
-h1 {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings: "slnt" 0;
-    margin-left: 2%;
-}
-
-img {
+img{
+    
     padding-left: 1%;
-    max-width: 100%;
-    height: auto;
     width: 5%;
-    /* hallo */
+    height: 5%;
 }
