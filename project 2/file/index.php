@@ -17,7 +17,7 @@
 
 <body>
   <nav>
-      <a href="partijen.php">partijen</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">partijen</a>
       <a href="nieuws.php">nieuws</a>
       <a href="stellingen.php">stellingen</a>
   </nav>
