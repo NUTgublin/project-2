@@ -14,4 +14,14 @@
      
 }
 
+nav {
+    background-color: #8D99AE;
+    padding: 1%;
+    font-size: 150%;
+}
+
+a:link {
+    color: #EDF2F4;
+}
+
 

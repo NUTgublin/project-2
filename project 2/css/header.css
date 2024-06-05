@@ -1,18 +1,19 @@
-body{
+body {
     margin: 0px;
 }
-header{
+
+header {
     display: flex;
-    flex-direction: flex-start;
-    font-family: inter bold;
+    align-items: center;
+    font-family: "Inter Bold", sans-serif;
     color: #EDF2F4;
     background-color:#2B2D42; 
-    padding: 10px;
-    
+ 
+
 }
 h1
 {
- 
+ align-self: center;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
@@ -22,7 +23,8 @@ h1
 }
 
 img{
-      
     
-} 
-
+    padding-left: 1%;
+    width: 5%;
+    height: 5%;
+}
