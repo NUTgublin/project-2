@@ -23,7 +23,13 @@
     <a href="stellingen.php">stellingen</a>
   </nav>
   <div class="DivContainer">
-    <p>hallo</p>
+    <div class="fototest">
+         <img id="imgPar" src="../Logos/stemming.jpg" alt="parlament">
+    </div>
+    
+    <div class="titel">
+        <h1>Doe de StemWijzer</h1>
+    </div>
   </div>
 
 
