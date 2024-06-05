@@ -15,7 +15,9 @@
 </head>
 
 <body>
+<div class="DivContainer">
 
+</div>
 
 
 <?php require 'footer.php' ?>
