@@ -15,7 +15,6 @@
 </head>
 
 <body>
-  <p>Hallo</p>
 <?php require 'footer.php' ?>
 </body>
     
