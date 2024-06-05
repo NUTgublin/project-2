@@ -19,7 +19,7 @@
   <nav>
       <a href="partijen.php">partijen</a>
       <a href="nieuws.php">nieuws</a>
-      <a href="partijen.php">partijen</a>
+      <a href="stellingen.php">stellingen</a>
   </nav>
   <div class="DivContainer">
   <p>hallo</p>
