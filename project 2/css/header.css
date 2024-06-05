@@ -1,6 +1,7 @@
 body{
     margin: 0px;
-    
+    grid-column: 1;
+    grid-row: 1/ span 5;
 }
 header{
     display: flex;
