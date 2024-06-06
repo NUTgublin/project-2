@@ -3,10 +3,6 @@
     font-family: quicksand;
 }
 
-.inter {
-    font-family: inter bold;
-}
-
 .DivContainer {
     display: grid;
     grid-template-columns: 50px 2fr repeat(2, 1fr) 50px;
@@ -22,7 +18,7 @@
     color: #8D99AE;
     height: 175px;
     border-radius: 10px;
-    width: 100px;
+    font-family: inter bold;
 }
 
 .fototest {

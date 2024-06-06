@@ -1,0 +1,11 @@
+.GridContainer{
+display: grid;
+margin: 0px;
+height: 100vh;
+min-height: 100vh;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+}
+.Hallo{
+    color: aqua;
+}

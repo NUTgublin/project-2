@@ -26,7 +26,11 @@
         <a href="stellingen.php">stellingen</a>
     </nav>
     <div class="GridContainer">
-
+<h2 class="Hallo">GroenLinks-PvdA: 'Economie gaat kapot met verdeeld Europa' • Lijsttrekkers van andere partijen aan het woord<h2>
+  <p>Op de avond voor de Europese verkiezingen gingen negen lijsttrekkers met elkaar in debat in NOS Europa kiest: Het debat. In dit liveblog lees je de belangrijkste punten uit het debat terug.
+    <ul>
+<li>De stembureaus zijn morgen open van 7.30 tot 21.00 uur.</li>
+<li>Samen kiezen we wie de 31 Nederlandse zetels in het Europees Parlement gaan innemen.</p></li></ul>
     </div>
     <?php require 'footer.php' ?>
 </body>
