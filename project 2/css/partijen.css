@@ -26,7 +26,8 @@ nav a:active {
 .FlexContainer {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
+    align-self: center;
     max-width: 65%;
     max-height: 100%;
     overflow: auto;
@@ -35,14 +36,28 @@ nav a:active {
 
 .VVD {    
     background-color: #EDF2F4;
-    align-self: center;
+    align-self: flex-start;
     max-width: 75%;
     max-height: auto;
-    padding: 1%;
+    
+
     
 }
 
 .VVD img {
+    max-width: 20%;
+    max-height: 30%;
+    width: auto;
+    height: auto;
+}
+
+.PVV {
+    background-color: #EDF2F4;
+    max-width: 75%;
+    max-height: auto;
+}
+
+.PVV img {
     max-width: 20%;
     max-height: 30%;
     width: auto;

@@ -30,6 +30,11 @@
                 De VVD heeft 24 zetels in de Tweede Kamer en is de partij van de minister-president Mark Rutte. De
                 partijleider van de VVD is Dilan Yeşilgöz-Zegerius</p>
         </div>
+        <div class="PVV">
+            <img src="https://verkiezingen101.nl/wp-content/uploads/2021/02/pvv.jpg" alt="PVV">
+            <p>De PVV is idioot</p>
+
+        </div>
     </section>
     <?php require 'footer.php' ?>
 </body>
