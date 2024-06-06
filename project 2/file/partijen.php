@@ -32,8 +32,10 @@
         </div>
         <div class="PVV">
             <img src="https://verkiezingen101.nl/wp-content/uploads/2021/02/pvv.jpg" alt="PVV">
-            <p>De PVV is idioot</p>
-
+            <p>De Partij voor de Vrijheid (PVV) is een Nederlandse politieke partij met een nationalistische signatuur.
+                De PVV is opgericht in 2005 onder de naam Vereniging Groep Wilders door Geert Wilders, een Kamerlid dat
+                zich het jaar daarvoor had afgescheiden van de VVD. De PVV heeft zowel conservatieve, liberale,
+                'rechtse' als 'linkse' standpunten. Geert Wilders is sinds 2006 politiek leider van de PVV</p>
         </div>
     </section>
     <?php require 'footer.php' ?>
