@@ -1,9 +1,5 @@
 * {
-    font-family: quicksand;
-}
-
-.inter {
-    font-family: inter bold;
+    font-family: 'Quicksand', sans-serif;
 }
 
 nav {
@@ -23,12 +19,16 @@ nav a:hover {
     color: #352D27;
 }
 
+nav a:active {
+  color: #352D27;
+}
+
 .GridContainer {
     display: grid;
     grid-template-columns: 25px repeat(2, 1fr) 25px;
-    grid-template-rows: repeat(5, 14vh);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template-rows: repeat(5);
+    grid-column-gap: 0%;
+    grid-row-gap: 0%;
 }
 
 .VVD {
@@ -40,6 +40,8 @@ nav a:hover {
     align-self: center;
     max-width: 75%;
     max-height: 100%;
+    padding: 1%;
+    
 }
 
 .VVD img {

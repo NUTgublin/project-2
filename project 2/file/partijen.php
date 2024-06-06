@@ -25,7 +25,10 @@
     <div class="GridContainer">
         <div class="VVD">
             <img src="https://www.liberaal-groen.nl/wp-content/uploads/2023/07/VVD-logo-Tweede-Kamer-2.jpg" alt="vvd">
-            <p>De VVD is een politieke partij doe aandacht geeft aan het helpen van de mensen.</p>
+            <p>De VVD is de Volkspartij voor Vrijheid en Democratie, een politieke partij in Nederland. De VVD is een
+                rechtse liberale partij, die vrijheid (van het individu) en democratie als belangrijke waarden ziet.
+                De VVD heeft 24 zetels in de Tweede Kamer en is de partij van de minister-president Mark Rutte. De
+                partijleider van de VVD is Dilan Yeşilgöz-Zegerius</p>
         </div>
     </div>
     <?php require 'footer.php' ?>
