@@ -24,7 +24,8 @@
 
 .titel button{
     color: aquamarine;
-    background-color: red;
+    background-color: green;
+    justify-content: flex-end;
 }
 
 .fototest {
