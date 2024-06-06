@@ -23,23 +23,21 @@ nav a:active {
   color: #352D27;
 }
 
-.GridContainer {
-    display: grid;
-    grid-template-columns: 25px repeat(2, 1fr) 25px;
-    grid-template-rows: repeat(5);
-    grid-column-gap: 0%;
-    grid-row-gap: 0%;
+.FlexContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 65%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 1%;
 }
 
-.VVD {
-    grid-column: 2;
-    grid-row: 1;
-    display: flex;
-    justify-content: center;
+.VVD {    
     background-color: #EDF2F4;
     align-self: center;
     max-width: 75%;
-    max-height: 100%;
+    max-height: auto;
     padding: 1%;
     
 }
