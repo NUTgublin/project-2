@@ -1,10 +1,6 @@
 * {
     font-family: quicksand;
 }
-#footercontainer{
-    position: relative;
-    min-height: 60vh;
-}
 footer {
     display: flex;
     justify-content: space-between;
