@@ -1,6 +1,11 @@
 * {
     font-family: quicksand;
 }
+
+body {
+    overflow-y: scroll;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
