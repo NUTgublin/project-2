@@ -29,7 +29,7 @@
     align-self: center;
     justify-self: center;
     align-items: center;
-    
+    transition-duration: 0.3s;
     color: #EDF2F4;
     background-color:  #8D99AE;
     font-family: "inter", sans-serif ;
@@ -41,6 +41,11 @@
 
     border-radius: 15px;
     box-shadow: 2px 3px 7px;
+}
+#btStartWijzer:hover
+{
+    background-color: #2B2D42;
+    color: white;
 }
 
 .fototest {
