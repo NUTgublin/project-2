@@ -55,7 +55,9 @@
 {
     background-color: #2B2D42;
     color: white;
+    cursor: pointer;
 }
+
 
 .fototest {
     grid-column: 1/ span 5;
