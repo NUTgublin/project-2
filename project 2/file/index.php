@@ -32,11 +32,16 @@
          <img id="imgPar" src="../Logos/stemming.jpg" alt="parlament">
     </div>
     
-    <div class="titel">
-        <h1>Doe de StemWijzer</h1>
-    
+    <div class="titelGrid">
+        <div class="titel">
+           <h1>Doe de StemWijzer</h1>
+          
+        </div>
+         <button id="btStartWijzer">Start</button>
     </div>
-    <button id="btStartWijzer">Start</button>
+
+  
+    
   </div>
 
 
