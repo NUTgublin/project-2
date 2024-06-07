@@ -34,8 +34,9 @@
     
     <div class="titel">
         <h1>Doe de StemWijzer</h1>
-        <button>Start</button>
+        
     </div>
+    <button id="btStartWijzer">Start</button>
   </div>
 
 
