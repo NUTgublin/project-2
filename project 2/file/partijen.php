@@ -37,6 +37,13 @@
                 zich het jaar daarvoor had afgescheiden van de VVD. De PVV heeft zowel conservatieve, liberale,
                 'rechtse' als 'linkse' standpunten. Geert Wilders is sinds 2006 politiek leider van de PVV</p>
         </div>
+        <div class="FVD">
+            <img src="https://th.bing.com/th/id/OIP.yHkmhU3UP_rjsExtzq6ZfgHaEK?rs=1&pid=ImgDetMain" alt="FVD">
+            <p>Forum voor Democratie (afgekort: FVD) is een Nederlandse politieke partij die zichzelf ziet als
+                liberaal-conservatief, maar doorgaans als rechts-populistisch, nationalistisch of radicaal-rechts
+                wordt beschouwd. De partij is met drie zetels geleid door Thierry Baudet
+                vertegenwoordigd in de Tweede Kamer en met twee zetels in de Eerste Kamer.</p>
+        </div>
     </section>
     <?php require 'footer.php' ?>
 </body>
