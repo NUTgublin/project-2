@@ -23,10 +23,8 @@
   </nav>
   <div class="GridContainer">
     <div class="parentDiv">
-      <div class="firstDiv">
+    <div class="SecondDiv">
         <h3>GroenLinks-PvdA: 'Economie gaat kapot met verdeeld Europa' • Lijsttrekkers van andere partijen aan het woord</h3>
-      </div>
-      <div class="SecondDiv">
         <p>Op de avond voor de Europese verkiezingen gingen negen lijsttrekkers met elkaar in debat in NOS Europa kiest: Het debat. In dit liveblog lees je de belangrijkste punten uit het debat terug.</p>
         <ul>
           <li>De stembureaus zijn morgen open van 7.30 tot 21.00 uur.</li>
@@ -39,10 +37,22 @@
       </div>
     </div>
     <div class="secondColumn">
+      <h3>Websites politieke partijen aangevallen door hackers</h3>
+      <p>Verschillende politieke partijen melden dat hun websites zijn aangevallen door hackers. De sites zijn of waren slecht bereikbaar door DDoS-aanvallen. Dat was hinderlijk voor kiezers die vandaag nog informatie wilden zoeken over kandidaten voor de Europese verkiezingen en hun standpunten.
+      <ul>
+      <li>Het CDA meldt op X: "Vanochtend was de CDA-website door een zware DDoS-aanval tijdelijk minder bereikbaar. Op verkiezingsdag beschouwen we dit als een aanval op vrije, democratische verkiezingen. We maken melding bij de relevante instanties."</li>
+
+      <li>Ook de sites van PVV en FvD lagen er tijdelijk uit. FvD-leider Baudet zegt dat "het hele team overuren werkt om de aanval af te slaan." Hij voegt er met een smiley aan toe: "Russen?"</li>
+
+      <li>Pro-Russisch hackers </li>
+      <li>De aanvallen zouden inderdaad uit die hoek kunnen komen, meldt het ANP, namelijk van de hackers van het pro-Russische Hacknet. "We gaan door met aanvallen op de websites van Nederland en hun partijen", schrijft de groep op Telegram.</li>
+
+      <li>Bij een DDoS-aanval (Distributed Denial of Service) worden computerservers bestookt met grote hoeveelheden dataverkeer, waardoor 
+        de servers verstopt raken en geen ruimte meer hebben voor gewoon internetverkeer.</p>  </ul> </div>
       <div class="thirdDiv">
+
       </div>
       <div class="fourthDiv">
-        
       </div>
     </div>
   </div>

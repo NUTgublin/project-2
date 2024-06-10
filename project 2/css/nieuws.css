@@ -16,7 +16,9 @@
     margin-top: 5px;
     margin-left: 15px;
     border-radius: 15px;
-    
+    height: 96%;
+    width: 95%;
+
 }
 
  .SecondDiv {
@@ -24,10 +26,22 @@
     max-width: 100%; 
     max-height: 100%;
     overflow: auto;
-}.firstDiv{
-    grid-row: 1 / span 2;
+    padding: 15px;
+}
+    
+    
+.secondColumn{
+    grid-row: 3/ span 2;
     max-width: 100%; 
     max-height: 100%;
+    padding: 15px;
+    background-color: #EDF2F4;
+    height: 96%;
+    width: 91%;
+    margin-top: 5px;
+    margin-left: 15px;
+    border-radius: 15px;
+    overflow: auto;
     
 }
 
