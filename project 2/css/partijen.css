@@ -23,71 +23,8 @@ nav a:active {
   color: #352D27;
 }
 
-.FlexContainer {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-self: center;
-    max-width: 100vw;
-    max-height: 100vh;
-    overflow: auto;
-    padding: 1%;
-    gap: 20px;
-    
-}
-
-.VVD {    
-    background-color: #EDF2F4;
-    align-self: flex-start;
-    max-width: 35%;
-    max-height: auto;
-    
-
-    
-}
-
-.VVD img {
-    max-width: 20%;
-    max-height: 30%;
-    width: auto;
-    height: auto;
-    padding: 1%;
-}
-
-.VVD p {
-    padding: 1%;
-}
-
-.PVV {
-    background-color: #EDF2F4;
-    max-width: 35%;
-    max-height: auto;
-    align-self: flex-start;
-}
-
-.PVV img {
-    max-width: 20%;
-    max-height: 30%;
-    width: auto;
-    height: auto;
-    padding: 1%;
-}
-
-.FVD{
-    align-self: flex-end;
-    background-color: #EDF2F4;
-    max-width: 35%;
-    max-height: auto;
-}
-
-.FVD img {
-    max-width: 20%;
-    max-height: 30%;
-    width: auto;
-    height: auto;
-    padding: 1%;
-}
-
-.FVD p {
+.logo {
+    max-width: 10%;
+    max-height: 10%;
     padding: 1%;
 }
