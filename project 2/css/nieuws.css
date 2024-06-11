@@ -1,72 +1,70 @@
-
 body {
-    font-family: 'Quicksand', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+
+.GridContainer {
+  display: grid;
+  margin: 0;
+  max-height: 90vh;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 20vh);
+  gap: 10px;
+  padding: 10px;
+}
+
+
+.contentDiv {
+  background-color: #EDF2F4;
+  border-radius: 15px;
+  padding: 15px;
+  overflow: auto;
+}
+
+.parentDiv {
+  grid-row: 1 / span 2;
+}
+
+.secondColumn {
+  grid-row: 3 / span 2;
+}
+
+.fifthDiv {
+  grid-row: 3 / span 2;
+}
+
+
+.contentDiv img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+  border-radius: 10px;
+
+}
+
+@media (max-width: 1200px) {
   .GridContainer {
-    display: grid;
-    margin: 0;
-    height: 90vh;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 29vh);
-    gap: 10px;
-    padding: 10px;
+    grid-template-rows: repeat(4, 25vh);
   }
-  
+}
 
-  .contentDiv {
-    background-color: #EDF2F4;
-    border-radius: 15px;
-    padding: 15px;
-    overflow: auto;
+@media (max-width: 768px) {
+  .GridContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 20vh);
   }
-  
+
   .parentDiv {
     grid-row: 1 / span 2;
   }
-  
-  .secondColumn {
-    grid-row: 3 / span 2;
+}
+
+@media (max-width: 480px) {
+  .GridContainer {
+    grid-template-rows: repeat(8, 25vh);
   }
-  
-  .fifthDiv {
-    grid-row: 3 / span 2;
-  }
-  
-  
-  .contentDiv img {
-    max-width: 50%;
-    height: auto;
-    display: block;
-    margin-top: 10px;
-    border-radius: 10px;
-  
-  }
-  
-  @media (max-width: 1200px) {
-    .GridContainer {
-      grid-template-rows: repeat(4, 25vh);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .GridContainer {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(8, 20vh);
-    }
-  
-    .parentDiv {
-      grid-row: 1 / span 2;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .GridContainer {
-      grid-template-rows: repeat(8, 25vh);
-    }
-  }
-  
+}

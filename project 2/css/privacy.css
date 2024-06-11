@@ -21,6 +21,13 @@ nav a:active {
     color: #352D27;
 }
 
-.flex-container h1 {
+.flex-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
     color: #8D99AE;
+}
+
+.flex-container h1 {
+    font-family: "inter", sans-serif ;
 }
