@@ -12,7 +12,7 @@ body {
     margin: 0;
     height: 90vh;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 29vh);
+    grid-template-rows: repeat(4, 25vh);
     gap: 10px;
     padding: 10px;
   }
