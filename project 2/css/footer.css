@@ -6,7 +6,6 @@
 footer {
     display: flex;
     justify-content: space-between;
-    position: absolute;
     align-items: center;
     left: 0;
     bottom: 0;
