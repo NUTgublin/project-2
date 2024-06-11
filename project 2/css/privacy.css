@@ -26,8 +26,13 @@ nav a:active {
     justify-content: flex-start;
     flex-direction: column;
     color: #8D99AE;
+    background-color: #EDF2F4;
 }
 
 .flex-container h1 {
     font-family: "inter", sans-serif ;
+}
+
+footer {
+    position: fixed;
 }
