@@ -26,17 +26,22 @@ $dbhandler = new dbhandler();
         <a href="nieuws.php">nieuws</a>
         <a href="stellingen.php">stellingen</a>
     </nav>
-    <?php
 
-    $rows = $dbhandler->SelectPartijen();
-
-    foreach ($rows as $row) {
-        echo "<tr>";
-        echo "<td><a href='" . $row["url"] . "' target='_blank'><img src='" . $row["logo"] . "' alt='" . $row["naam"] . " image' class='logo'></a></td>";
-        echo "<td>";
-    }
-    ?>
-    <?php require 'footer.php' ?>
+    <div class="flex-container">
+        <?php
+        $rows = $dbhandler->SelectPartijen();
+        if ($rows) {
+            foreach ($rows as $row) {
+                echo "<div class='flex-item'>";
+                echo "<a href='" . $row["url"] . "' target='_blank'><img src='" . $row["logo"] . "' alt='" . $row["naam"] . " image' class='logo'></a>";
+                echo "</div>";
+            }
+        } else {
+            echo "<div>No data found</div>";
+        }
+        ?>
+    </div>
+        <?php require 'footer.php' ?>
 </body>
 
 </html>

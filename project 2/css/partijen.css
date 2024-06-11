@@ -2,6 +2,12 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 nav {
     display: flex;
     justify-content: center;
@@ -10,7 +16,7 @@ nav {
     font-size: 130%;
 }
 
-nav a:link {
+nav a:link, nav a:visited {
     color: #EDF2F4;
     text-decoration: none;
 }
@@ -20,11 +26,26 @@ nav a:hover {
 }
 
 nav a:active {
-  color: #352D27;
+    color: #352D27;
 }
 
-.logo {
-    max-width: 10%;
-    max-height: 10%;
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.flex-item {
+    flex: 0 1 20%; /* Adjust the percentage as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1%;
 }
+
+.flex-item img {
+    max-width: 40%;
+    height: auto;
+}
+
