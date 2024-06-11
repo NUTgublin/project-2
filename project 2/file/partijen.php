@@ -32,7 +32,7 @@ $dbhandler = new dbhandler();
 
     foreach ($rows as $row) {
         echo "<tr>";
-        echo "<td><img src='" . $row["logo"] . "' alt='" . $row["naam"] . " image' class='logo'></td>";
+        echo "<td><a href='" . $row["url"] . "' target='_blank'><img src='" . $row["logo"] . "' alt='" . $row["naam"] . " image' class='logo'></a></td>";
         echo "<td>";
     }
     ?>
