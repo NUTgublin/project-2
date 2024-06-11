@@ -1,87 +1,88 @@
-.GridContainer {
-    display: grid;
-    margin: 0px;
-    height: 90%;
-    min-height: 90%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 20vh);
-}
-
-.parentDiv {
-    grid-row: 1 / span 2;
-    grid-column: 1;
+/* General Styles */
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  nav {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+  }
+
+  .GridContainer {
+    display: grid;
+    margin: 0;
+    height: 90vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 29vh);
+    gap: 10px;
+    padding: 10px;
+  }
+  
+
+  .contentDiv {
     background-color: #EDF2F4;
-    margin-top: 5px;
-    margin-left: 15px;
     border-radius: 15px;
-    height: 96%;
-    width: 95%;
-
-}
-
- .SecondDiv {
-    grid-row: 1 / span 2;
-    
-    max-width: 100%; 
-    max-height: 100%;
-    overflow: auto;
-    
-}
-    
-    
-.secondColumn{
-    grid-row: 3/ span 2;
-    max-width: 100%; 
-    max-height: 100%;
     padding: 15px;
-    background-color: #EDF2F4;
-    height: 87%;
-    width: 92%;
-    margin-top: 5px;
-    margin-left: 15px;
-    border-radius: 15px;
     overflow: auto;
-    
-}
-
-@media (max-width: 1200px) {
+  }
+  
+  .parentDiv {
+    grid-row: 1 / span 2;
+  }
+  
+  .secondColumn {
+    grid-row: 3 / span 2;
+  }
+  
+  .fifthDiv {
+    grid-row: 3 / span 2;
+  }
+  
+  
+  .contentDiv img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+  
+  }
+  
+  @media (max-width: 1200px) {
     .GridContainer {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 25vh);
+      grid-template-rows: repeat(4, 25vh);
     }
-
-    .parentDiv {
-        margin-left: 10px;
-    }
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .GridContainer {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(8, 20vh);
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 20vh);
     }
-
+  
     .parentDiv {
-        grid-row: 1 / span 2;
-        grid-column: 1 / span 1;
-        margin-left: 0px;
-        margin-top: 10px;
+      grid-row: 1 / span 2;
     }
-
-    .firstDiv, .SecondDiv {
-        grid-row: auto;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     .GridContainer {
-        grid-template-rows: repeat(8, 25vh);
+      grid-template-rows: repeat(8, 25vh);
     }
-
-    .parentDiv {
-        margin-top: 5px;
-    }
-}
+  }
+  
