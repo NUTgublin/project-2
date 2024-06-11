@@ -21,6 +21,18 @@ final class dbhandler
             //Return false zodat het script waar deze functie uitgevoerd wordt ook weet dat het misgegaan is.
         }
     }
+    public function SelectStellingen(){
+
+        try {
+            $pdo = new PDO($this->dataSource, $this->username, $this->password);
+            $statement = $pdo->prepare("SELECT * FROM  stelling");
+            $statement->execute();
+            return $statement->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $exception) {
+            //throw $th;
+        }
+
+    }
 
 
 
