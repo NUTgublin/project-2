@@ -16,7 +16,7 @@
 <header> 
     <img id="logo" src="..\Logos\logo-neutraal-kieslab-lichtblauw.svg" alt="logo">
     <h1> Neutraal Kieslab </h1>
-<button id="BTNuitloggen">Uitloggen</button>
+<button id="BTNuitloggen" >Uitloggen</button>
 
    
 </header>
