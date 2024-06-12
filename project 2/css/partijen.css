@@ -28,7 +28,7 @@ nav a:active {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 400px;
+    height: 300px;
     gap: 20px;
     padding: 5%;
 }
@@ -45,12 +45,10 @@ nav a:active {
 }
 
 .flex-item img {
-    max-width: 50%;
+    max-width: 30%;
     height: auto;
 }
 
-footer{
-    position: fixed;
-  }
+
 
   

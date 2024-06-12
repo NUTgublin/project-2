@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neutraal Kieslab</title>
   <link rel="stylesheet" href="../css/index.css">
-  
+
   <script src="project2.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,25 +25,21 @@
     <a href="stellingen.php">stellingen</a>
   </nav>
 
-
   <div class="DivContainer">
-    
+
     <div class="fototest">
-         <img id="imgPar" src="../Logos/stemming.jpg" alt="parlament">
+      <img id="imgPar" src="../Logos/stemming.jpg" alt="parlament">
     </div>
-    
+
     <div class="titelGrid">
-        <div class="titel">
-           <h1>Doe de StemWijzer</h1>
-          
-        </div>
-         <button id="btStartWijzer">Start</button>
+      <div class="titel">
+        <h1>Doe de StemWijzer</h1>
+      </div>
+      <form action="stemwijzer.php" id="form">
+        <button id="btStartWijzer">Start</button>
+      </form>
     </div>
-
-  
-    
   </div>
-
 
   <?php require 'footer.php' ?>
 
