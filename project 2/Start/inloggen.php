@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <h1>Inloggen</h1>
-        <form action="index.php" method="POST">
+        <form action="../file/index.php" method="POST">
             <div class="form-group">
                 <label for="username">Gebruikersnaam:</label>
                 <input type="text" id="username" name="gebruikersnaam" required>
