@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 final class dbhandler
 {
@@ -6,7 +6,8 @@ final class dbhandler
     private $username = "root";
     private $password = "";
 
-    public function SelectPartijen() {
+    public function SelectPartijen()
+    {
         try {
             $pdo = new PDO($this->dataSource, $this->username, $this->password);
 
@@ -21,17 +22,35 @@ final class dbhandler
             //Return false zodat het script waar deze functie uitgevoerd wordt ook weet dat het misgegaan is.
         }
     }
-    public function SelectStellingen(){
+    public function SelectStellingen()
+    {
 
         try {
             $pdo = new PDO($this->dataSource, $this->username, $this->password);
             $statement = $pdo->prepare("SELECT * FROM  stelling");
             $statement->execute();
-            return $statement->fetchAll(PDO::FETCH_ASSOC);
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
         } catch (PDOException $exception) {
             //throw $th;
         }
 
+    }
+
+    public function SelectAntwoorden($vraag_id)
+    {
+        try {
+            $pdo = new PDO($this->dataSource, $this->username, $this->password);
+
+            $statement = $pdo->prepare("SELECT * FROM stelling WHERE vraag_id = :vraag_id");
+            $statement->bindParam(':vraag_id', $vraag_id, PDO::PARAM_INT);
+            $statement->execute();
+
+            return $statement->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $exception) {
+            echo "Error: " . $exception->getMessage();
+            return false;
+        }
     }
 
 
@@ -44,5 +63,3 @@ final class dbhandler
 
 }
 ?>
-
-

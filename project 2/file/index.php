@@ -1,13 +1,12 @@
+<?php require_once 'header.php' ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php require 'header.php' ?>
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neutraal Kieslab</title>
   <link rel="stylesheet" href="../css/index.css">
-
   <script src="project2.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +25,6 @@
   </nav>
 
   <div class="DivContainer">
-
     <div class="fototest">
       <img id="imgPar" src="../Logos/stemming.jpg" alt="parlament">
     </div>
@@ -35,14 +33,14 @@
       <div class="titel">
         <h1>Doe de StemWijzer</h1>
       </div>
-      <form action="stemwijzer.php" id="form">
-        <button id="btStartWijzer">Start</button>
+
+      <form action="start.php" id="form" method="POST">
+        <button id="btStartWijzer" type="submit">Start</button>
       </form>
     </div>
+
   </div>
-
   <?php require 'footer.php' ?>
-
 </body>
 
 </html>
