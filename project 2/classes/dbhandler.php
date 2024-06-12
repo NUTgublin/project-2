@@ -2,9 +2,9 @@
 
 final class dbhandler
 {
-    private $dataSource = "mysql:dbname=stemwijzer;host=localhost;"; //Hier dient je connection string te komen mysql:dbname=;host=;
-    private $username = "root";
-    private $password = "";
+    public $dataSource = "mysql:dbname=stemwijzer;host=localhost;"; //Hier dient je connection string te komen mysql:dbname=;host=;
+    public $username = "root";
+    public $password = "";
 
     public function SelectPartijen()
     {
@@ -46,7 +46,14 @@ final class dbhandler
             $statement->bindParam(':vraag_id', $vraag_id, PDO::PARAM_INT);
             $statement->execute();
 
-            return $statement->fetchAll(PDO::FETCH_ASSOC);
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            if ($result === false) {
+                throw new Exception("Fout bij het uitvoeren van de query.");
+            }
+
+            return $result;
+
         } catch (PDOException $exception) {
             echo "Error: " . $exception->getMessage();
             return false;
