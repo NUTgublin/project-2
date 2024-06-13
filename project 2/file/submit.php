@@ -11,6 +11,7 @@ if (!isset($_POST['antwoord'])) {
 $user_id = $_SESSION['gebruiker_id'];
 $antwoord = $_POST['antwoord'];
 
+//slaat antwoorden op in database
 try {
     $pdo = new PDO($db->dataSource, $db->username, $db->password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
