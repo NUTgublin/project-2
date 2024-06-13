@@ -11,7 +11,6 @@ if (!isset($_POST['antwoord'])) {
 $user_id = $_SESSION['gebruiker_id'];
 $antwoord = $_POST['antwoord'];
 
-//slaat antwoorden op in database
 try {
     $pdo = new PDO($db->dataSource, $db->username, $db->password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -20,19 +19,17 @@ try {
     $statement->bindParam(':gebruiker_id', $user_id, PDO::PARAM_STR);
     $statement->bindParam(':antwoord', $antwoord, PDO::PARAM_STR);
     $statement->execute();
-
-    // Ga naar de volgende vraag
-    $_SESSION['current_question']++;
-
-    // Check of er nog meer vragen zijn (stel dat er 15 vragen zijn)
-    if ($_SESSION['current_question'] > 15) {
-        header("Location: results.php"); // Ga naar resultatenpagina
-    } else {
-        header("Location: stemwijzer.php");
-    }
-    exit();
 } catch (PDOException $exception) {
     echo "Error: " . $exception->getMessage();
     exit();
 }
+
+$_SESSION['current_question']++;
+
+if ($_SESSION['current_question'] > 15) {
+    header("Location: results.php");
+} else {
+    header("Location: stemwijzer.php");
+}
+exit();
 ?>
