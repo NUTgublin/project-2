@@ -68,7 +68,7 @@ final class dbhandler
     } catch (PDOException $exception) {
 
         return false;
-//sdsdsd
+//sdsdsdfas
     }
 }public function getUserByUsername($username)
 {
