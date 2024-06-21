@@ -1,10 +1,10 @@
 <?php
 final class dbhandler
 {
-    private $dataSource = "mysql:dbname=stemwijzer;host=localhost;";
-    private $username = "root";
-    private $password = "";
-    private $pdo;
+    public $dataSource = "mysql:dbname=stemwijzer;host=localhost;";
+    public $username = "root";
+    public $password = "";
+    public $pdo;
 
     public function __construct()
     {
