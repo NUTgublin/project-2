@@ -58,24 +58,6 @@ final class dbhandler
         }
     }
 
-    public function SelectAntwoorden($stelling_id)
-    {
-        try {
-            $pdo = new PDO($this->dataSource, $this->username, $this->password);
-            $statement = $pdo->prepare("SELECT * FROM stelling WHERE id = :stelling_id");
-            $statement->bindParam(':stelling_id', $stelling_id, PDO::PARAM_INT);
-            $statement->execute();
-            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-            if ($result === false) {
-                throw new Exception("Fout bij het uitvoeren van de query.");
-            }
-
-            return $result;
-        } catch (PDOException $exception) {
-            echo "Error: " . $exception->getMessage();
-            return false;
-        }
    
  private function executeQuery($query, $params = [])
 {
@@ -180,6 +162,5 @@ final class dbhandler
             return false;
         }
     }
-}
 }
 ?>
