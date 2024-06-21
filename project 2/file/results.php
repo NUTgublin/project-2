@@ -5,12 +5,17 @@ $db = new dbhandler();
 
 $user_id = $_SESSION['gebruiker_id'];
 
+// Haal de best passende partij op
+$best_party = $db->getBestMatchingParty($user_id);
+
+// Haal de antwoorden van de gebruiker op
+$answers = [];
 try {
     $pdo = new PDO($db->dataSource, $db->username, $db->password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $statement = $pdo->prepare("SELECT antwoord FROM gebruiker_antwoorden WHERE gebruiker_id = :gebruiker_id");
-    $statement->bindParam(':gebruiker_id', $user_id, PDO::PARAM_STR);
+    $statement->bindParam(':gebruiker_id', $user_id, PDO::PARAM_INT);
     $statement->execute();
     $answers = $statement->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $exception) {
@@ -36,7 +41,9 @@ try {
             <li><?php echo htmlspecialchars($answer['antwoord']); ?></li>
         <?php endforeach; ?>
     </ul>
-    <!-- Voeg hier logica toe om de partij te bepalen die het beste overeenkomt met de antwoorden -->
+
+    <h3>De partij die het beste bij uw antwoorden past:</h3>
+    <p><?php echo htmlspecialchars($best_party); ?></p>
 </body>
 
 </html>
