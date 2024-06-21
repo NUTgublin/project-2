@@ -142,7 +142,7 @@ final class dbhandler
                 }
             }
 
-            // Zoek de partij met de hoogste score
+            // Zoek de partij met de hoogste score ja
             $best_party = null;
             $highest_score = -1;
             foreach ($scores as $partij_id => $score) {
