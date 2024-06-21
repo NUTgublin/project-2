@@ -58,7 +58,6 @@ final class dbhandler
         }
     }
 
-<<<<<<< HEAD
     public function SelectAntwoorden($stelling_id)
     {
         try {
@@ -77,7 +76,6 @@ final class dbhandler
             echo "Error: " . $exception->getMessage();
             return false;
         }
-=======
    
  private function executeQuery($query, $params = [])
 {
@@ -88,7 +86,6 @@ final class dbhandler
     } catch (PDOException $exception) {
 
         return false;
->>>>>>> 624dcdede114dffd36ba17967fbdc8f8cefa65ad
     }
 }public function getUserByUsername($username)
 {
@@ -183,5 +180,6 @@ final class dbhandler
             return false;
         }
     }
+}
 }
 ?>
