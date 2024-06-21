@@ -17,14 +17,9 @@
     <img id="logo" src="..\Logos\logo-neutraal-kieslab-lichtblauw.svg" alt="logo">
     <h1> Neutraal Kieslab </h1>
 
-    <button id="BTNuitloggen" onclick="logout()">Uitloggen</button>
+    <a id="BTNuitloggen" href="logout.php">Uitloggen</a>
 
-<script>
-function logout() {
-   
-    window.location.href = '../Start/inloggen.php';
-}
-</script>
+
    
 </header>
 </body>
