@@ -17,10 +17,7 @@ final class dbhandler
             exit('Database connection error. Please try again later.');
         }
     }
-    public $dataSource = "mysql:dbname=stemwijzer;host=localhost;";
-    public $username = "root";
-    public $password = "";
-
+  
     public function SelectPartijen()
     {
         try {
@@ -105,21 +102,7 @@ final class dbhandler
         return false;
     }
 }
-    public function SelectAntwoorden($vraag_id)
-    {
-        try {
-            $pdo = new PDO($this->dataSource, $this->username, $this->password);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            $statement = $pdo->prepare("SELECT * FROM stelling WHERE vraag_id = :vraag_id");
-            $statement->bindParam(':vraag_id', $vraag_id, PDO::PARAM_INT);
-            $statement->execute();
-            return $statement->fetchAll(PDO::FETCH_ASSOC);
-        } catch (PDOException $exception) {
-            echo "Error: " . $exception->getMessage();
-            return false;
-        }
-    }
+  
 
     public function getBestMatchingParty($user_id)
     {
