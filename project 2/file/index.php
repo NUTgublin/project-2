@@ -52,21 +52,7 @@ $username = $_SESSION['ingelogd_als'];
                 <button id="btStartWijzer" type="submit">Start</button>
             </form>
         </div>
-    </div>
-    
-    <?php require_once 'footer.php'; ?>
 
-    <div class="titelGrid">
-      <div class="titel">
-        <h1>Doe de StemWijzer</h1>
-      </div>
-
-      <form action="start.php" id="form" method="POST">
-        <button id="btStartWijzer" type="submit">Start</button>
-       
-      </form>
-      
-    </div>
     
     <article class="articleStem">
     <h1>Waarom zou ik stemmen?</h1>
