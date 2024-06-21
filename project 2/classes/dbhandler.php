@@ -1,5 +1,4 @@
 <?php
-
 final class dbhandler
 {
     public $dataSource = "mysql:dbname=stemwijzer;host=localhost;";
@@ -10,11 +9,8 @@ final class dbhandler
     {
         try {
             $pdo = new PDO($this->dataSource, $this->username, $this->password);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
             $statement = $pdo->prepare("SELECT * FROM partijen");
             $statement->execute();
-
             return $statement->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $exception) {
             echo "Error: " . $exception->getMessage();
@@ -26,8 +22,6 @@ final class dbhandler
     {
         try {
             $pdo = new PDO($this->dataSource, $this->username, $this->password);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
             $statement = $pdo->prepare("SELECT * FROM stelling");
             $statement->execute();
             return $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -37,16 +31,20 @@ final class dbhandler
         }
     }
 
-    public function SelectAntwoorden($vraag_id)
+    public function SelectAntwoorden($stelling_id)
     {
         try {
             $pdo = new PDO($this->dataSource, $this->username, $this->password);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            $statement = $pdo->prepare("SELECT * FROM stelling WHERE vraag_id = :vraag_id");
-            $statement->bindParam(':vraag_id', $vraag_id, PDO::PARAM_INT);
+            $statement = $pdo->prepare("SELECT * FROM stelling WHERE id = :stelling_id");
+            $statement->bindParam(':stelling_id', $stelling_id, PDO::PARAM_INT);
             $statement->execute();
-            return $statement->fetchAll(PDO::FETCH_ASSOC);
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            if ($result === false) {
+                throw new Exception("Fout bij het uitvoeren van de query.");
+            }
+
+            return $result;
         } catch (PDOException $exception) {
             echo "Error: " . $exception->getMessage();
             return false;
@@ -61,11 +59,11 @@ final class dbhandler
 
             // Haal de antwoorden van de gebruiker op
             $statement = $pdo->prepare("SELECT antwoord FROM gebruiker_antwoorden WHERE gebruiker_id = :gebruiker_id");
-            $statement->bindParam(':gebruiker_id', $user_id, PDO::PARAM_INT);
+            $statement->bindParam(':gebruiker_id', $user_id, PDO::PARAM_STR);
             $statement->execute();
             $user_answers = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            if (!$user_answers) {
+            if (empty($user_answers)) {
                 throw new Exception("Geen antwoorden gevonden voor gebruiker ID: $user_id");
             }
 
@@ -74,19 +72,15 @@ final class dbhandler
             $statement->execute();
             $partij_antwoorden = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            if (!$partij_antwoorden) {
-                throw new Exception("Geen partij-antwoorden gevonden");
-            }
-
             // Bereken de scores voor elke partij
             $scores = [];
             foreach ($partij_antwoorden as $pa) {
                 foreach ($user_answers as $ua) {
-                    if ($pa['stelling_id'] == $ua['vraag_id'] && $pa['antwoord'] == $ua['antwoord']) {
-                        if (!isset($scores[$pa['partij_id']])) {
-                            $scores[$pa['partij_id']] = 0;
+                    if ($pa['stelling_ID'] == $ua['stelling_id'] && $pa['antwoord'] == $ua['antwoord']) {
+                        if (!isset($scores[$pa['partij_ID']])) {
+                            $scores[$pa['partij_ID']] = 0;
                         }
-                        $scores[$pa['partij_id']]++;
+                        $scores[$pa['partij_ID']]++;
                     }
                 }
             }
@@ -102,22 +96,18 @@ final class dbhandler
             }
 
             if ($best_party === null) {
-                throw new Exception("Geen overeenkomende partij gevonden");
+                throw new Exception("Geen partij gevonden die overeenkomt met de antwoorden.");
             }
 
             // Haal de naam van de beste partij op
             $statement = $pdo->prepare("SELECT naam FROM partijen WHERE id = :partij_id");
             $statement->bindParam(':partij_id', $best_party, PDO::PARAM_INT);
             $statement->execute();
-            $party_name = $statement->fetch(PDO::FETCH_ASSOC);
+            $party_name = $statement->fetch(PDO::FETCH_ASSOC)['naam'];
 
-            if (!$party_name) {
-                throw new Exception("Partijnaam niet gevonden voor partij ID: $best_party");
-            }
-
-            return $party_name['naam'];
+            return $party_name;
         } catch (PDOException $exception) {
-            echo "PDO Error: " . $exception->getMessage();
+            echo "Error: " . $exception->getMessage();
             return false;
         } catch (Exception $exception) {
             echo "Error: " . $exception->getMessage();
