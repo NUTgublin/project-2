@@ -1,30 +1,24 @@
 <?php
-$gebruikers = [
-    ['user' => 'Remi', 'password' => '123']
-];
-
+include '../classes/dbhandler.php';
 session_start();
 
+$db = new dbhandler();
+
 if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
-    
     $username = $_POST['gebruikersnaam'];
     $password = $_POST['wachtwoord'];
-    
-    $login_success = false;
 
-    foreach ($gebruikers as $gebruiker) {
-        if ($gebruiker['user'] == $username && $gebruiker['password'] == $password) {
-            // Bestaat
-            $_SESSION['ingelogd_als'] = $gebruiker['user'];
-            $login_success = true;
-            break;
-        }
-    }
+    $user = $db->getUserByUsername($username);
 
-    if ($login_success) {
-      
+    if ($user && $password === $user['password']) {
+        session_unset();
+        session_destroy();
+        session_start();
+
+        $_SESSION['ingelogd_als'] = $user['user'];
+        session_regenerate_id();
         header("Location: ../file/index.php");
-        exit("../file/index.php");
+        exit();
     } else {
         $login_error = "Onjuiste gebruikersnaam of wachtwoord.";
     }
@@ -42,11 +36,9 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
 <body>
     <div class="login-container">
         <h1>Inloggen</h1>
-        <?php
-        if (isset($login_error)) {
-            echo "<p style='color:red;'>$login_error</p>";
-        }
-        ?>
+        <?php if (isset($login_error)) : ?>
+            <p style="color:red;"><?php echo htmlspecialchars($login_error); ?></p>
+        <?php endif; ?>
         <form action="" method="POST">
             <div class="form-group">
                 <label for="username">Gebruikersnaam:</label>
@@ -60,6 +52,7 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
                 <input type="submit" value="Inloggen">
             </div>
         </form>
+        Heeft u nog geen account? <a href="../file/registreer.php">Registreer</a>
     </div>
 </body>
 </html>
