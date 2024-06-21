@@ -1,4 +1,52 @@
 * {
     font-family: 'Quicksand', sans-serif;
-    font-style: italic;
+}
+
+.StemKnop {
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.StemKnop2 {
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #8D99AE;
+    padding: 1%;
+    font-size: 130%;
+}
+
+nav a:link {
+    color: #EDF2F4;
+}
+
+nav a:hover {
+    color: #352D27;
+}
+
+nav a:active {
+    color: #352D27;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
 }
