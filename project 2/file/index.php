@@ -1,12 +1,14 @@
 <?php
 if (isset($_SESSION['ingelogd_als'])) {
     session_regenerate_id(true);
+    
 }
 session_start();
 
 if (!isset($_SESSION['ingelogd_als'])) {
 
     header("Location: ../Start/inloggen.php");
+    
     exit();
 }
 
@@ -53,5 +55,6 @@ $username = $_SESSION['ingelogd_als'];
     </div>
     
     <?php require_once 'footer.php'; ?>
+
 </body>
 </html>
