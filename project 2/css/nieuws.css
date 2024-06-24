@@ -1,51 +1,32 @@
-body {
-  font-family: 'Quicksand', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  color: rgb(244, 244, 244);
 }
 
-
-.GridContainer {
-  display: grid;
-  margin: 0;
-  max-height: 90vh;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 20vh);
-  gap: 10px;
+.flex-item {
+  width: 40%; 
+  max-width: 400px; 
+  margin: 10px;
   padding: 10px;
+  background-color: #8D99AE;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.news-item h3 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 
-.contentDiv {
-  background-color: #EDF2F4;
-  border-radius: 15px;
-  padding: 15px;
-  overflow: auto;
+.news-item a:hover {
+  text-decoration: underline;
+  color: rgb(190, 190, 190);
 }
-
-.parentDiv {
-  grid-row: 1 / span 2;
-}
-
-.secondColumn {
-  grid-row: 3 / span 2;
-}
-
-.fifthDiv {
-  grid-row: 3 / span 2;
-}
-
-
-.contentDiv img {
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin-top: 10px;
-  border-radius: 10px;
-
-}
-
 @media (max-width: 1200px) {
   .GridContainer {
     display: grid;
@@ -59,13 +40,9 @@ body {
 }
 
 @media (max-width: 768px) {
-  .GridContainer {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 20vh);
-  }
-
-  .parentDiv {
-    grid-row: 1 / span 2;
+  .flex-item {
+    width: 80%; 
+    max-width: none; 
   }
 }
 

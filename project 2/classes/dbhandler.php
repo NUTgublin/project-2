@@ -13,7 +13,7 @@ final class dbhandler
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $exception) {
             error_log("Database connection error: " . $exception->getMessage());
-            exit('Database connection error. Please try again later.');
+            exit('Database connection error.');
         }
     }
   
@@ -30,7 +30,19 @@ final class dbhandler
             return false;
         }
     }
-
+    public function SelectNieuws()
+    {
+        try {
+            $statement = $this->pdo->prepare("SELECT * FROM nieuws");
+            $pdo = new PDO($this->dataSource, $this->username, $this->password);
+            $statement = $pdo->prepare("SELECT * FROM nieuws");
+            $statement->execute();
+            return $statement->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $exception) {
+            echo "Error: " . $exception->getMessage();
+            return false;
+        }
+    }
     public function SelectStellingen()
     {
         try {

@@ -11,7 +11,8 @@ $dbhandler = new dbhandler();
     <title>stellingen</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/stellingen.css">
-   
+       <link rel="stylesheet" href="../css/dark-mode.css">
+    <script src="../js/project2.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -21,10 +22,10 @@ $dbhandler = new dbhandler();
 </head>
 <body>
     <nav>
-        <a href="index.php">home</a>
-        <a href="partijen.php">partijen</a>
-        <a href="nieuws.php">nieuws</a>
-        <a href="stellingen.php">stellingen</a>
+        <a href="index.php">Home</a>
+        <a href="partijen.php">Partijen</a>
+        <a href="nieuws.php">Nieuws</a>
+        <a href="stellingen.php">Stellingen</a>
     </nav>
     <div class="DivStelling">
         <?php

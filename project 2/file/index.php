@@ -1,20 +1,13 @@
 <?php
-if (isset($_SESSION['ingelogd_als'])) {
-    session_regenerate_id(true);
-    
-}
 session_start();
 
 if (!isset($_SESSION['ingelogd_als'])) {
-
     header("Location: ../Start/inloggen.php");
-    
     exit();
 }
 
 $username = $_SESSION['ingelogd_als'];
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +15,8 @@ $username = $_SESSION['ingelogd_als'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neutraal Kieslab</title>
     <link rel="stylesheet" href="../css/index.css">
-    <script src="../js/project2.js"></script>
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <script src="../js/project2.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -55,6 +49,5 @@ $username = $_SESSION['ingelogd_als'];
     </div>
     
     <?php require_once 'footer.php'; ?>
-
 </body>
 </html>
