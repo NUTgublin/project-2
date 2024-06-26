@@ -1,6 +1,22 @@
-.flex-item12{
-    width: 20px;
-}.contactimg
-{
-width: 20px;
+.flex-item12 {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
+
+.contactimg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30px;
+    width: 100%;
+}
+
+.Text {
+    margin-left: 1%;
+    overflow: hidden;
+}
+
+
+

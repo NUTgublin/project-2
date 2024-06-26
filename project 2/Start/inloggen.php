@@ -4,6 +4,7 @@ session_start();
 
 $db = new dbhandler();
 $registration_success = isset($_GET['registered']) && $_GET['registered'] === 'true';
+
 if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
     $username = $_POST['gebruikersnaam'];
     $password = $_POST['wachtwoord'];
@@ -36,12 +37,15 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
 <body>
     <div class="login-container">
         <h1>Inloggen</h1>
-        <?php if ($registration_success) : ?>
-            <p style="color:green;">Registratie succesvol! U kunt nu inloggen.</p>
-        <?php endif; ?>
-        <?php if (isset($login_error)) : ?>
-            <p style="color:red;"><?php echo htmlspecialchars($login_error); ?></p>
-        <?php endif; ?>
+        <?php
+       
+        if ($registration_success) {
+            echo '<p style="color:green;">Registratie succesvol! U kunt nu inloggen.</p>';
+        }
+        if (isset($login_error)) {
+            echo '<p style="color:red;">' . htmlspecialchars($login_error) . '</p>';
+        }
+        ?>
         <form action="" method="POST">
             <div class="form-group">
                 <label for="username">Gebruikersnaam:</label>
