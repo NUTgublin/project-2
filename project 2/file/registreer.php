@@ -7,7 +7,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['wachtwoord'];
 
     $result = $dbHandler->createUser($username, $password);
-     echo "<meta http-equiv='refresh' content='0'";
+    if ($result) {
+        $success_message = "Account succesvol aangemaakt!";
+        // Redirect the user to a different page after successful registration
+        header("Location: ../Start/inloggen.php?registered=true");
+        exit();
+    } else {
+        $success_message = "Er is een fout opgetreden bij het aanmaken van het account.";
+    }
 }
 ?>
 
@@ -22,6 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="login-container">
         <h1>Registreren</h1>
+        <?php if (!empty($success_message)) : ?>
+            <p style="color:green;"><?php echo htmlspecialchars($success_message); ?></p>
+        <?php endif; ?>
         
         <form action="" method="POST">
             <div class="form-group">
@@ -32,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="password">Wachtwoord:</label>
                 <input type="password" id="password" name="wachtwoord" required>
             </div>
+            
             <div class="form-group">
                 <input type="submit" value="Registreren">
             </div>

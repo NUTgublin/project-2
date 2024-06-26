@@ -12,7 +12,9 @@ body {
 }
 body.dark-mode {
   background-color: var(--secondary-color);
-  color: gray;
+  color: #EAE6E3;
+  background-image: none;
+
 }
 
 body.dark-mode header {
@@ -42,4 +44,6 @@ body.dark-mode .contentDiv {
 body.dark-mode .flex-item {
   background-color: rgb(56, 56, 56);
   color: var(--primary-color);
+}body.dark-mode .stellingen{
+  background-color: gray;
 }

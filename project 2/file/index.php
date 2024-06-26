@@ -76,9 +76,6 @@ $username = $_SESSION['ingelogd_als'];
    
     
   </div>
-
-   
-  
   <?php require 'footer.php' ?>
 </body>
 </html>

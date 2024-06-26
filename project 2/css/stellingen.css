@@ -39,7 +39,8 @@ body {
 
 .stellingen:hover {
     cursor: pointer;
+} footer{
+    position: none;
+    
 }
-footer{
-  position: fixed;
-}
+
