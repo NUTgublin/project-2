@@ -1,12 +1,8 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['ingelogd_als'])) {
-    header("Location: ../Start/inloggen.php");
-    exit();
-}
 
-$username = $_SESSION['ingelogd_als'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
