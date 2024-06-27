@@ -1,26 +1,18 @@
 <?php
 session_start();
 include '../classes/dbhandler.php';
+include 'header.php';
+
+// Maak een instantie van de dbhandler klasse
 $db = new dbhandler();
 
 $user_id = $_SESSION['gebruiker_id'];
 
 // Haal de best passende partij op
-$best_party = $db->getBestMatchingParty($user_id);
+$best_party = $db->getBestMatchingParty($user_id); // Deze functie moet worden gedefinieerd in dbhandler.php
 
 // Haal alle antwoorden van de gebruiker op
-try {
-    $pdo = new PDO($db->dataSource, $db->username, $db->password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    $statement = $pdo->prepare("SELECT stelling_id, antwoord FROM gebruiker_antwoorden WHERE gebruiker_id = :gebruiker_id");
-    $statement->bindParam(':gebruiker_id', $user_id, PDO::PARAM_STR);
-    $statement->execute();
-    $answers = $statement->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $exception) {
-    echo "Error: " . $exception->getMessage();
-    exit();
-}
+$answers = $db->getUserAnswers($user_id); // Deze functie moet worden gedefinieerd in dbhandler.php
 ?>
 
 <!DOCTYPE html>
@@ -34,11 +26,19 @@ try {
 </head>
 
 <body>
+
+    <nav>
+        <a href="index.php">Home</a>
+        <a href="partijen.php">Partijen</a>
+        <a href="nieuws.php">Nieuws</a>
+        <a href="stellingen.php">Stellingen</a>
+    </nav>
     <h3>Uw Antwoorden</h3>
     <ul>
         <?php foreach ($answers as $answer): ?>
-            <li>Stelling <?php echo htmlspecialchars($answer['stelling_id']); ?>:
-                <?php echo htmlspecialchars($answer['antwoord']); ?></li>
+            <li>Stelling <?php echo htmlspecialchars($answer['vraag_id']); ?>:
+                <?php echo htmlspecialchars($answer['antwoord']); ?>
+            </li>
         <?php endforeach; ?>
     </ul>
 
