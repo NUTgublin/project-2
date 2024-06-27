@@ -21,6 +21,7 @@
     justify-content: center;
     align-items: center;
     padding: 1%;
+    
     background-color: #EDF2F4;
     box-shadow: 1px 2px 5px;
     border-radius: 30px;
@@ -34,5 +35,29 @@
 footer{
     position: fixed;
 }
-
+@media (max-width: 1200px) {
+    .GridContainer {
+      display: grid;
+      margin: 0;
+      height: 90vh;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 25vh);
+      gap: 10px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .flex-item {
+      width: 80%; 
+      max-width: none; 
+    }
+   
+  }
+  
+  @media (max-width: 480px) {
+    .GridContainer {
+      grid-template-rows: repeat(8, 25vh);
+    }
+  }
   

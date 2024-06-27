@@ -25,6 +25,7 @@ session_start();
 </head>
 
 <body>
+<div class="content-wrapper">
   <?php
   require_once '../classes/dbhandler.php';
   $dbhandler = new dbhandler();

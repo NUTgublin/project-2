@@ -59,7 +59,9 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
                 <input type="submit" value="Inloggen">
             </div>
         </form>
-        Heeft u nog geen account? <a href="../file/registreer.php">Registreer</a>
+        Heeft u nog geen account? <a href="../file/registreer.php">Registreer</a><br><br>
+        Ik wil niet meer inloggen <a href="../file/index.php">Home</a>
     </div>
+ 
 </body>
 </html>

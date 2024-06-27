@@ -46,4 +46,10 @@ body.dark-mode .flex-item {
   color: var(--primary-color);
 }body.dark-mode .stellingen{
   background-color: gray;
+}body.dark-mode .titel{
+  background: rgb(56, 56, 56);
+}body.dark-mode .titel::-webkit-scrollbar {
+  display: none;
+}body.dark-mode article{
+  background-color: rgb(56, 56, 56);
 }

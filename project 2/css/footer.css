@@ -38,3 +38,91 @@ a:hover {
     color: #8D99AE;
 }
 
+@media (max-width: 1200px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+        background-color: #2B2D42;
+        color: #EDF2F4;
+        font-size: 14px;
+    }
+    
+    footer div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 15%;
+    }
+    
+    footer p {
+        padding-left: 1%;
+    }
+
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+        background-color: #2B2D42;
+        color: #EDF2F4;
+        font-size: 20px;
+    }
+    
+    footer div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 15%;
+        font-size: 65%;
+    }
+    
+    footer p {
+        padding-left: 1%;
+        font-size: 65%;
+    }
+
+   
+  }
+  
+  @media (max-width: 480px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+        background-color: #2B2D42;
+        color: #EDF2F4;
+        font-size: 20px;
+    }
+    
+    footer div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 15%;
+        font-size: 45%;
+    }
+    
+    footer p {
+        padding-left: 1%;
+        font-size: 45%;
+    }
+
+  }
