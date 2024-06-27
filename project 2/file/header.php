@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,26 +18,23 @@
     <img id="logo" src="..\Logos\logo-neutraal-kieslab-lichtblauw.svg" alt="logo">
     <h1> Neutraal Kieslab </h1>
     <?php
-   
     if (isset($_SESSION['ingelogd_als'])) {
-   
         echo '<a id="BTNuitloggen" href="logout.php">Uitloggen</a>';
     } else {
-        
         echo '<a id="BTNuitloggen" href="../Start/inloggen.php">Inloggen</a>';
     }
     ?>
 
-    
-    
     <div class="theme-switch">
-        
-       
         <img src="../Logos/moon.png" id="icon">
-        
     </div>
-    
 </header>
+<nav>
+    <a href="index.php">Home</a>
+    <a href="partijen.php">Partijen</a>
+    <a href="nieuws.php">Nieuws</a>
+    <a href="stellingen.php">Stellingen</a>
+</nav>
 
 </body>
 </html>

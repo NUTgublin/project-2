@@ -21,12 +21,7 @@ session_start();
 <body>
     <?php require_once 'header.php'; ?>
     
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="partijen.php">Partijen</a>
-        <a href="nieuws.php">Nieuws</a>
-        <a href="stellingen.php">Stellingen</a>
-    </nav>
+
 
     <div class="DivContainer">
         <div class="fototest">
@@ -36,13 +31,13 @@ session_start();
         <div class="titelGrid">
             <div class="titel">
                 <h1>Doe de StemWijzer</h1>
-            </div>
+            
 
             <form action="start.php" id="form" method="POST">
                 <button id="btStartWijzer" type="submit">Start</button>
             </form>
         </div>
-
+</div>
     
     <article class="articleStem">
     <h1>Waarom zou ik stemmen?</h1>

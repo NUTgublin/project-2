@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,12 +30,7 @@
   $dbhandler = new dbhandler();
   ?>
 
-  <nav>
-    <a href="index.php">Home</a>
-    <a href="partijen.php">Partijen</a>
-    <a href="nieuws.php">Nieuws</a>
-    <a href="stellingen.php">Stellingen</a>
-  </nav>
+  
   <div class="flex-container">
   <?php
   $rows = $dbhandler->SelectNieuws();

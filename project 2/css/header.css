@@ -60,4 +60,64 @@ body {
   #icon{
     width: 30px;
     cursor: pointer;
+  }nav {
+    display: flex;
+    justify-content: center;
+    background-color: #8D99AE;
+    padding: 1%;
+    font-size: 160%;
+}
+nav a:link {
+    color: #EDF2F4;
+}
+
+nav a:hover {
+    color: #352D27;
+}
+
+nav a:active {
+    color: #352D27;
+}
+@media (max-width: 1200px) {
+  .GridContainer {
+    display: grid;
+    margin: 0;
+    height: 90vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 25vh);
+    gap: 10px;
+    padding: 10px;
+  }nav {
+    display: flex;
+    justify-content: center;
+    background-color: #8D99AE;
+    padding: 1%;
+    font-size: 160%;
+}
+}
+
+@media (max-width: 768px) {
+  .flex-item {
+    width: 80%; 
+    max-width: none; 
   }
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #8D99AE;
+    padding: 1%;
+    font-size: 130%;
+}
+}
+
+@media (max-width: 480px) {
+  .GridContainer {
+    grid-template-rows: repeat(8, 25vh);
+  }nav {
+    display: flex;
+    justify-content: center;
+    background-color: #8D99AE;
+    padding: 1%;
+    font-size: 100%;
+}
+}

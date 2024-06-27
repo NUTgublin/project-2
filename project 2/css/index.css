@@ -27,6 +27,7 @@
     color: #8D99AE;
     border-radius: 10px;
     font-family: inter bold;
+    overflow: scroll;
     
 }
 
@@ -72,25 +73,6 @@
 
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #8D99AE;
-    padding: 1%;
-    font-size: 130%;
-}
-
-nav a:link {
-    color: #EDF2F4;
-}
-
-nav a:hover {
-    color: #352D27;
-}
-
-nav a:active {
-    color: #352D27;
-}
 
 #form {
     grid-row: 2;

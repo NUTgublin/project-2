@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+
+
+?>
 <?php require_once 'header.php' ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +18,6 @@
 </head>
 
 <body>
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="partijen.php">Partijen</a>
-        <a href="nieuws.php">Nieuws</a>
-        <a href="stellingen.php">Stellingen</a>
-    </nav>
 
     <div class="flex-container">
         <h1>Privacyverklaring</h1>

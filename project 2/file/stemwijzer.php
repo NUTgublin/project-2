@@ -1,7 +1,7 @@
 <?php
 session_start();
-include '../classes/dbhandler.php';
-include 'header.php';
+require_once '../classes/dbhandler.php';
+
 
 // Maak een instantie van de dbhandler klasse
 $db = new dbhandler();
@@ -24,15 +24,12 @@ $question = $db->getQuestionById($current_question); // Deze functie moet worden
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stemwijzer</title>
     <link rel="stylesheet" href="../css/stemwijzer.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/header.css">
 </head>
 
 <body>
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="partijen.php">Partijen</a>
-        <a href="nieuws.php">Nieuws</a>
-        <a href="stellingen.php">Stellingen</a>
-    </nav>
+<?php require 'header.php' ?>
     <div class="flex-container">
         <h3><?php echo htmlspecialchars($question['title']); ?></h3>
         <p><?php echo htmlspecialchars($question['vraag']); ?></p>
@@ -42,6 +39,7 @@ $question = $db->getQuestionById($current_question); // Deze functie moet worden
             <button class="StemKnop2" type="submit" name="antwoord" value="oneens">Oneens</button>
         </form>
     </div>
+    
 </body>
 
 </html>

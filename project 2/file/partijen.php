@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+
+
+?>
+<?php
 include_once "../classes/dbhandler.php";
 $dbhandler = new dbhandler();
 ?>
@@ -23,13 +29,7 @@ $dbhandler = new dbhandler();
 </head>
 
 <body>
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="partijen.php">Partijen</a>
-        <a href="nieuws.php">Nieuws</a>
-        <a href="stellingen.php">Stellingen</a>
-    </nav>
-
+    
     <div class="flex-container">
         <?php
         $rows = $dbhandler->SelectPartijen();
