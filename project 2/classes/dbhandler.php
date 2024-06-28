@@ -119,15 +119,15 @@ final class dbhandler
     {
         try {
             $statement = $this->pdo->prepare("SELECT vraag_id, antwoord FROM gebruiker_antwoorden WHERE gebruiker_id = :gebruiker_id");
-            $statement->bindParam(':gebruiker_id', $user_id, PDO::PARAM_STR);
+            $statement->bindParam(':gebruiker_id', $user_id, PDO::PARAM_INT);
             $statement->execute();
             return $statement->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $exception) {
             echo "Error: " . $exception->getMessage();
             return false;
-
         }
     }
+
 
 
     public function getBestMatchingParty($user_id)
