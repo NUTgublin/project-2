@@ -25,28 +25,8 @@ $question = $db->getQuestionById($current_question); // Deze functie moet worden
     <title>Stemwijzer</title>
     <link rel="stylesheet" href="../css/stemwijzer.css">
     <link rel="stylesheet" href="../css/dark-mode.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <style>
-        /* Navigation styles */
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 10px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px;
-            margin: 0 10px;
-            color: #EDF2F4;
-        }
-
-        nav a:hover {
-            color: #352D27;
-                }
-    </style>
+    <link rel="stylesheet" href="../css/footer.css">
+    <script src="../js/project2.js" defer></script>
 </head>
 
 <body>
