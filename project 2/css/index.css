@@ -25,7 +25,7 @@
     border-radius: 10px;
     font-family: inter bold;
     overflow: scroll;
-    padding: 16px;
+   
 }.titel::-webkit-scrollbar {
     display: none;
   }
@@ -41,7 +41,7 @@
     font-weight: 500;
     font-size: 20px;
     border-radius: 15px;
-    box-shadow: 2px 3px 7px;
+   
     padding: 8px 16px;
 }
 
