@@ -173,11 +173,12 @@ final class dbhandler
                 }
             }
 
-
+           
 
             if ($best_party === null) {
                 throw new Exception("Geen partij gevonden die overeenkomt met de antwoorden.");
-            } else {
+            }
+            else {
                 return $best_party;
             }
 
