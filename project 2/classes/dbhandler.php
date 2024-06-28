@@ -117,11 +117,18 @@ final class dbhandler
 
     public function getUserAnswers($user_id)
     {
-        $statement = $this->pdo->prepare("SELECT vraag_id, antwoord FROM gebruiker_antwoorden WHERE gebruiker_id = :gebruiker_id");
-        $statement->bindParam(':gebruiker_id', $user_id, PDO::PARAM_STR);
-        $statement->execute();
-        return $statement->fetchAll(PDO::FETCH_ASSOC);
+        try {
+            $statement = $this->pdo->prepare("SELECT vraag_id, antwoord FROM gebruiker_antwoorden WHERE gebruiker_id = :gebruiker_id");
+            $statement->bindParam(':gebruiker_id', $user_id, PDO::PARAM_STR);
+            $statement->execute();
+            return $statement->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $exception) {
+            echo "Error: " . $exception->getMessage();
+            return false;
+
+        }
     }
+
 
     public function getBestMatchingParty($user_id)
     {
@@ -168,12 +175,11 @@ final class dbhandler
                 }
             }
 
-           
+
 
             if ($best_party === null) {
                 throw new Exception("Geen partij gevonden die overeenkomt met de antwoorden.");
-            }
-            else {
+            } else {
                 return $best_party;
             }
 
