@@ -7,12 +7,13 @@ include 'header.php';
 $db = new dbhandler();
 
 $user_id = $_SESSION['gebruiker_id'];
+$user_id = 2147483647;
 
 // Haal de best passende partij op
 $best_party = $db->getBestMatchingParty($user_id); // Deze functie moet worden gedefinieerd in dbhandler.php
 
 // Haal alle antwoorden van de gebruiker op
-$answers = $db->getUserAnswers($user_id); // Deze functie moet worden gedefinieerd in dbhandler.php
+$answers = $db->getUserAnswers($user_id); 
 ?>
 
 <!DOCTYPE html>

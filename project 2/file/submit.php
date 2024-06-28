@@ -4,12 +4,14 @@ include '../classes/dbhandler.php';
 
 // Maak een instantie van de dbhandler klasse
 $db = new dbhandler();
+var_dump($_SERVER['REQUEST_METHOD']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+ 
     if (isset($_POST['antwoord']) && isset($_POST['vraag_id'])) {
         // Haal gebruikersinformatie op (voorbeeld)
         $user_id = $_SESSION['gebruiker_id']; // Verondersteld dat gebruiker_id al is ingesteld bij sessie starten
-
+  
         // Ontvang antwoord en vraag_id
         $antwoord = $_POST['antwoord'];
         $vraag_id = $_POST['vraag_id'];
