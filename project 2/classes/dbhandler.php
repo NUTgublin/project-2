@@ -128,8 +128,6 @@ final class dbhandler
         }
     }
 
-
-
     public function getBestMatchingParty($user_id)
     {
         try {
